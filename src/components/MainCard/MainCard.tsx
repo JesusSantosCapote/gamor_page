@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Button, Link, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import background from '../../static/malcore.jpg';
 import ToggleButton from '@mui/material/ToggleButton';
@@ -26,12 +26,24 @@ export default function MainCard(){
             <DemoPaper variant='elevation' elevation={4}>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container>
-                    <Grid item xs={4} sx={{backgroundColor:"aliceblue", height:'500px', textAlign:'left'}}>
-                        <Box sx={{marginLeft:'30px', marginTop:'100px'}}>
-                        <h2>start</h2>
-                        <h2>streaming</h2>
-                        <h2>games</h2>
-                        <h2>differently</h2>
+                    <Grid item xs={4} sx={{height:'500px', textAlign:'left'}}>
+                        <Box sx={{marginLeft:'30px', marginTop:'80px'}}>
+                        <Typography variant='h3'>start</Typography>
+                        <Typography variant='h3' sx={{color:'darkorange'}}>streaming</Typography>
+                        <Typography variant='h3'>games</Typography>
+                        <Typography variant='h3'>differently</Typography>
+                        </Box>
+                        <Typography sx={{marginLeft: '30px', marginTop:'20px'}}>
+                            gamor now has <strong>stream party</strong> platform
+                        </Typography>
+                        <Box sx={{display:'flex', justifyContent:'space-evenly', marginTop:'50px', alignItems:'center'}}>
+                            <Button sx={{borderRadius:'9999px', backgroundColor:'white', color:'black', height:'50px', boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+                                '&:hover': {
+                                boxShadow: '0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)',
+                                },}}>
+                                    Create Account
+                            </Button>
+                            <Link href="#" underline="none" sx={{color:'black', fontSize:'20px', marginRight:'60px', ":hover":{color:'darkorange'}}}>Sign In</Link>
                         </Box>
                     </Grid>
                     <Grid item xs={4} sx={{backgroundImage:`url(${background})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
