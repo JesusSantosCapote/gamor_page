@@ -1,0 +1,42 @@
+{
+    "game": [
+        {"name": "Call of Duty"},
+        {"name": "Baldurs Gate 3"},
+        {"name": "Fortnite"}
+    ],
+
+    "event": [
+        {
+            "platform": "party",
+            "game": {"name":"Call of Duty"},
+            "name": "Party 1",
+            "users": [
+                {"name": "Tom"},
+                {"name": "Jerry"}
+            ]
+        },
+
+        {
+            "platform":"party",
+            "game":{"name":"Call of Duty"},
+            "name": "Party 2",
+            "users": [
+                {"name": "Astarion"},
+                {"name": "Karlach"},
+                {"name": "Reikel"}
+            ]
+        },
+
+        {
+            "platform":"match",
+            "game":{"name":"Fortnite"},
+            "name": "Party 2",
+            "users": [
+                {"name": "Astarion"},
+                {"name": "Karlach"},
+                {"name": "Reikel"}
+            ]
+        }
+
+    ]
+}
