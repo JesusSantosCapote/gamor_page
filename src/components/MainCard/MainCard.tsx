@@ -22,7 +22,7 @@ export default function MainCard(){
     };
     
     return (
-        <Box sx={{marginLeft:'60px', marginRight:'60px'}}>
+        <Box sx={{marginLeft:'60px', marginRight:'60px', marginTop:'30px'}}>
             <DemoPaper variant='elevation' elevation={4}>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container>
@@ -50,8 +50,11 @@ export default function MainCard(){
 
                     </Grid>
                     <Grid item xs={4}>
-                        <h2>01. Choose Platform</h2>
-                        <Box sx={{padding:'5px 5px', backgroundColor:"aquamarine", width: '70%', borderRadius:'9999px', marginX:'auto'}}>
+                        <Box sx={{display:'flex', justifyContent:'center', marginTop:'20px'}}>
+                            <Typography variant='h5' sx={{color:'slategrey', fontWeight:'regular'}}>01.</Typography>
+                            <Typography variant='h5' sx={{fontWeight:'bold'}}>Choose Platform</Typography>
+                        </Box>
+                        <Box sx={{padding:'5px 5px', backgroundColor:"whitesmoke", width: '70%', borderRadius:'9999px', marginX:'auto'}}>
                             <ToggleButtonGroup
                                 color="primary"
                                 value={alignment}

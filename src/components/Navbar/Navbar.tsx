@@ -23,14 +23,20 @@ export default function Navbar(){
 
     return (
         <Box>
-            <Box sx={{display:{xs:'none', md:'flex'}, flexGrow:1, marginTop:'60px'}}>
-                <Box sx={{display:'flex', justifyContent:'space-between', marginLeft:'60px', width: '20%'}}>
-                    {pages.map((name) => (<Link href="#" sx={{color:'darkviolet'}} underline="none">{name}</Link>))}
+            <Box sx={{display:{xs:'none', md:'flex'}, flexGrow:1, marginTop:'60px', alignItems:'center'}}>
+                <Box sx={{display:'flex', justifyContent:'space-between', marginLeft:'60px', width: '30%'}}>
+                    {pages.map((name) => (<Link href="#" sx={{color:'darkviolet', fontSize:'20px', fontWeight:'bold'}} underline="none">{name}</Link>))}
                 </Box>
-                <Box sx={{display:'flex', justifyContent:'center', width:'60%'}}><strong>GAMOR</strong></Box>
-                <Box sx={{display:'flex', justifyContent:'space-between', width:'20%', marginRight: '60px'}}>
-                    <Link href="#" underline="none" sx={{color:'black'}}>Sign In</Link>
-                    <Button sx={{borderRadius:'9999px', backgroundColor:'black', color:'white'}}>Contained</Button>
+                <Typography variant='h4' sx={{display:'flex', justifyContent:'center', width:'50%', marginRight:'110px', fontWeight:'bold'}}>GAMOR</Typography>
+                <Box sx={{display:'flex', justifyContent:'space-between', width:'20%', marginRight: '60px', alignItems:'center'}}>
+                    <Link href="#" underline="none" sx={{color:'black', fontSize:'20px', fontWeight:'bold', ":hover":{color:'darkorange'}}}>Sign In</Link>
+                    <Button sx={{borderRadius:'9999px', backgroundColor:'black', color:'white', height:'50px', boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+                                '&:hover': {
+                                boxShadow: '0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)',
+                                backgroundColor:'darkorange'
+                                },}}>
+                                    Create Account
+                    </Button>
                 </Box>
             </Box>
 
