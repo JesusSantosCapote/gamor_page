@@ -20,17 +20,17 @@ export default function Navbar(){
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
-    
+
     return (
         <Box>
             <Box sx={{display:{xs:'none', md:'flex'}, flexGrow:1, marginTop:'60px'}}>
                 <Box sx={{display:'flex', justifyContent:'space-between', marginLeft:'60px', width: '20%'}}>
-                    {pages.map((name) => (<Link href="#" underline="none">{name}</Link>))}
+                    {pages.map((name) => (<Link href="#" sx={{color:'darkviolet'}} underline="none">{name}</Link>))}
                 </Box>
                 <Box sx={{display:'flex', justifyContent:'center', width:'60%'}}><strong>GAMOR</strong></Box>
                 <Box sx={{display:'flex', justifyContent:'space-between', width:'20%', marginRight: '60px'}}>
-                    <Link href="#" underline="none">Sign In</Link>
-                    <Button variant="contained">Contained</Button>
+                    <Link href="#" underline="none" sx={{color:'black'}}>Sign In</Link>
+                    <Button sx={{borderRadius:'9999px', backgroundColor:'black', color:'white'}}>Contained</Button>
                 </Box>
             </Box>
 
@@ -66,7 +66,7 @@ export default function Navbar(){
                 >
                 {pages.map((page) => (
                     <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center" sx={{color:'darkviolet'}}>{page}</Typography>
                     </MenuItem>
                 ))}
                 </Menu>
@@ -74,8 +74,8 @@ export default function Navbar(){
                 
                 <Box sx={{display:'flex', justifyContent:'center', width:'60%'}}><strong>GAMOR</strong></Box>
                 <Box sx={{display:'flex', justifyContent:'space-between', width:'20%', marginRight: '60px'}}>
-                    <Link href="#" underline="none">Sign In</Link>
-                    <Button variant="contained">Contained</Button>
+                    <Link href="#" underline="none" sx={{color:'black'}}>Sign In</Link>
+                    <Button sx={{borderRadius:'9999px', backgroundColor:'black', color:'white'}}>Contained</Button>
                 </Box>
             </Box>
         </Box>
