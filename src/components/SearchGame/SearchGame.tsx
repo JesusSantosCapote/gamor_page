@@ -1,5 +1,4 @@
 import { IGame } from "../../types";
-import { Box, IconButton } from "@mui/material";
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { useState } from "react";
@@ -7,12 +6,10 @@ import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import { IEvent } from "../../types";
 import { useEvent } from "../../hooks";
 import Avatar from '@mui/material/Avatar';
 import AddBoxRoundedIcon from '@mui/icons-material/AddBoxRounded';
+import { Box, FormControl, IconButton, Typography } from "@mui/material";
 
 interface ISearchGameProps{
     games: IGame[],
@@ -38,24 +35,25 @@ export function SearchGame({games, platform}: ISearchGameProps){
 
     return (
         <Box sx={{marginX: 'auto', width: '60%'}}>
-            <DemoPaper>
+            <DemoPaper elevation={3}>
+            <FormControl variant="standard" sx={{width:'100%', backgroundColor:'white', ":focus":{outlineColor:'black'}}}>
                 <Select
-                    labelId="demo-simple-select-helper-label"
-                    id="demo-simple-select-helper"
-                    value={game}
-                    onChange={handleChange}
-                    sx={{width: '100%', border:'solid 0px'}}
-                    >
-                    {games.map((g) => <MenuItem value={g.name}>{g.name}</MenuItem>)}
+                labelId="demo-simple-select-filled-label"
+                value={game}
+                id="demo-simple-select-filled"
+                onChange={handleChange}
+                sx={{width: '100%', border:'none', fontSize:"20px", fontWeight:'bold', ":focus":{outlineColor:'black'}}}
+                >
+                {games.map((g) => <MenuItem value={g.name}>{g.name}</MenuItem>)}
                 </Select>
-
+            </FormControl>
                 <List>
                     {events?.map((e) => 
-                    <ListItem>
+                    <ListItem sx={{":hover":{backgroundColor:'whitesmoke'}}}>
                         <Box sx={{display:'flex', justifyContent:"space-between", alignItems:"center"}}>
-                            <ListItemText>{e.name}</ListItemText>
+                            <Typography sx={{fontWeight:'bold'}}>{e.name}</Typography>
                             <Box sx={{display:"flex", marginLeft:"10px"}}>
-                                {e.users.map((u) => <Avatar sx={{width:20, height:20}}>{u.name.charAt(0)}</Avatar>)}
+                                {e.users.map((u) => <Avatar sx={{width:20, height:20, backgroundColor:'darkorange'}}>{u.name.charAt(0)}</Avatar>)}
                             </Box>
                             <IconButton aria-label="add-box" sx={{}}>
                                 <AddBoxRoundedIcon />

@@ -6,13 +6,13 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { useState } from 'react';
 import { DemoPaper } from '../DemoPaper';
 import { SearchGame } from '../SearchGame';
-
-
+import { useGames } from '../../hooks';
 
 
 export default function MainCard(){
 
     const [alignment, setAlignment] = useState('party');
+    const {games} = useGames()
 
     const handleChange = (
         event: React.MouseEvent<HTMLElement>,
@@ -54,22 +54,26 @@ export default function MainCard(){
                             <Typography variant='h5' sx={{color:'slategrey', fontWeight:'regular'}}>01.</Typography>
                             <Typography variant='h5' sx={{fontWeight:'bold'}}>Choose Platform</Typography>
                         </Box>
-                        <Box sx={{padding:'5px 5px', backgroundColor:"whitesmoke", width: '70%', borderRadius:'9999px', marginX:'auto'}}>
+                        <Box sx={{padding:'5px 5px', backgroundColor:"whitesmoke", width: '70%', borderRadius:'9999px', marginX:'auto', marginTop:'20px'}}>
                             <ToggleButtonGroup
-                                color="primary"
                                 value={alignment}
                                 exclusive
                                 onChange={handleChange}
                                 aria-label="Platform"
-                                sx={{width:'100%', marginX:'auto'}}
+                                sx={{width:'100%', marginX:'auto', border:'none'}}
                                 >
-                                <ToggleButton value="party" sx={{border:'solid 1px', borderRadius:'9999px', width:'33%'}}>Party</ToggleButton>
-                                <ToggleButton value="match" sx={{border:'solid 1px', width:'34%'}}>Matchs</ToggleButton>
-                                <ToggleButton value="streams" sx={{border:'solid 1px', borderRadius:'9999px', width:'33%'}}>Streams</ToggleButton>
+                                <ToggleButton value="party" sx={{border:'none 1px', borderRadius:'9999px', width:'33%', fontWeight:'bold'}}>Party</ToggleButton>
+                                <ToggleButton value="match" sx={{border:'none 1px', width:'34%', fontWeight:'bold'}}>Matchs</ToggleButton>
+                                <ToggleButton value="streams" sx={{border:'none 1px', borderRadius:'9999px', width:'33%', fontWeight:'bold'}}>Streams</ToggleButton>
                             </ToggleButtonGroup>
                         </Box>
-                        <h2>02. Searching Game</h2>
-                        <SearchGame games={[{name: 'Call of Duty'}]} platform={alignment}/>
+                        <Box sx={{marginTop:'30px'}}>
+                            <Box sx={{display:'flex', justifyContent:'center', marginTop:'20px', marginBottom:'20px'}}>
+                                <Typography variant='h5' sx={{color:'slategrey', fontWeight:'regular'}}>01.</Typography>
+                                <Typography variant='h5' sx={{fontWeight:'bold'}}>Searching Games</Typography>
+                            </Box>
+                            <SearchGame games={games} platform={alignment}/>
+                        </Box>
                     </Grid>
                 </Grid>
             </Box>
