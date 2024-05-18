@@ -69,7 +69,7 @@ export default function MainCard(){
                         </Box>
                         <Box sx={{marginTop:'30px'}}>
                             <Box sx={{display:'flex', justifyContent:'center', marginTop:'20px', marginBottom:'20px'}}>
-                                <Typography variant='h5' sx={{color:'slategrey', fontWeight:'regular'}}>01.</Typography>
+                                <Typography variant='h5' sx={{color:'slategrey', fontWeight:'regular'}}>02.</Typography>
                                 <Typography variant='h5' sx={{fontWeight:'bold'}}>Searching Games</Typography>
                             </Box>
                             <SearchGame games={games} platform={alignment}/>
