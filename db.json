@@ -30,7 +30,7 @@
         {
             "platform":"match",
             "game":{"name":"Fortnite"},
-            "name": "Party 2",
+            "name": "Match 1",
             "users": [
                 {"name": "Astarion"},
                 {"name": "Karlach"},
