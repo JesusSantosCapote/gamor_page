@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+# Gamor Page
+
+A tiny game streaming page for training React
+
+## Setup
+1. Go to the root folder of the project. The same directory of package.json file.
+2. Run: `npm install`
+
+## Run
+1. Navigate to the root folder of the project.
+2. To run the json server that mocks an API for the page, execute: `json-server --watch db.json --port 8000`
+3. To start the page, run: `npm start`
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
