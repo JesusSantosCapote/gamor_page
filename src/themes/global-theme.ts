@@ -26,6 +26,8 @@ export const getDesignTokens = (mode: PaletteMode) => ({
               secondary: grey[500],
               main: deepOrange[500]
             },
+
+            link: deepPurple[500]
           }
 
         : {
@@ -48,6 +50,8 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             },
 
             hover: deepOrange[500],
+
+            link: deepOrange[500],
 
             text: {
               primary: '#fff',
