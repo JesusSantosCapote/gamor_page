@@ -8,7 +8,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
         ? {
             // palette values for light mode
             primary: {
-                main: grey[800],
+                main: '#ffffff',
                 light: grey[500],
                 dark: grey[900],
             },
@@ -19,6 +19,11 @@ export const getDesignTokens = (mode: PaletteMode) => ({
                 dark: grey[300]
             },
 
+            background:{
+              default:'#f0f2f4',
+              secondary: '#f6f8fa'
+            },
+
             hover: deepPurple[500],
 
             text: {
@@ -27,13 +32,17 @@ export const getDesignTokens = (mode: PaletteMode) => ({
               main: deepOrange[500]
             },
 
-            link: deepPurple[500]
+            link: deepPurple[500],
+
+            decoration: deepOrange[500],
+
+            button: '#ffffff'
           }
 
         : {
             // palette values for dark mode
             primary: {
-                main: grey[800],
+                main: grey[500],
                 light: grey[700],
                 dark: grey[900],
             },
@@ -46,7 +55,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
 
             background: {
               default: '#1a2028',
-              paper: '#23272f',
+              secondary: '#0d121a',
             },
 
             hover: deepOrange[500],
@@ -54,10 +63,15 @@ export const getDesignTokens = (mode: PaletteMode) => ({
             link: deepOrange[500],
 
             text: {
-              primary: '#fff',
+              primary: '#ffffff',
               secondary: grey[500],
               main: deepPurple[500]
             },
+
+            button: grey[900],
+            
+            decoration: deepPurple[500]
+
           }),
     },
   });

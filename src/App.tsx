@@ -23,7 +23,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{width:'100%', height:'100%', marginLeft:'0px', marginRight:'0px'}}>
+      <Box sx={{width:'100%', height:'100%', marginLeft:'0px', marginRight:'0px', padding:'20px'}}>
         <Navbar handleMode={handleMode}/>
         <MainCard />
       </Box>

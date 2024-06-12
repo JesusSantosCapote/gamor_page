@@ -43,12 +43,12 @@ export default function Navbar({handleMode}:INavbarProps){
                         {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
                     </IconButton>
                         <Link href="#" underline="none" sx={{color:'text.primary', fontSize:'20px', fontWeight:'bold', ":hover":{color:"text.main"}}}>Sign In</Link>
-                        <Button sx={{borderRadius:'9999px', backgroundColor:'primary.dark', color:'white', height:'50px', boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
+                        <Button sx={{borderRadius:'9999px', backgroundColor:'primary.dark', padding:'15px', color:'white', border:'solid 1px white', height:'50px', boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)',
                                     '&:hover': {
                                     boxShadow: '0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)',
                                     backgroundColor:'hover'
                                     },}}>
-                                        Create Account
+                                        <Typography sx={{fontWeight:'bold', textAlign:'center', fontSize:'12px'}}>Create Account</Typography>
                         </Button>
                 </Box>
             </Box>
