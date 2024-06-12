@@ -7,6 +7,9 @@ import { MidCard } from '../MidCard';
 
 export default function MainCard(){
     const {games} = useGames()
+
+    //In a real project this must be fetch from backend
+    const countdownDate = Date.now() + 1000000
     
     return (
         <Box sx={{marginLeft:'60px', marginRight:'60px', marginTop:'30px'}}>
@@ -14,7 +17,7 @@ export default function MainCard(){
                 <Stack direction={{xs:'column',md:'column', lg:'row'}}>
                     <LeftCard />
 
-                    <MidCard />
+                    <MidCard date={countdownDate}/>
 
                     <RightCard games={games} />
                     
